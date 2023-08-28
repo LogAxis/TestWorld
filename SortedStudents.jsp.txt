@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sorted Students</title>
+    <style>
+        /* Your CSS styling here */
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <ul>
+            <li><a href="index.html">Create Student</a></li>
+            <li><a href="students.jsp">All Students</a></li>
+            <li><a href="sort.jsp">Sort Students by Marks</a></li>
+            <li><a href="find.jsp">Find Student by ID</a></li>
+        </ul>
+    </div>
+    
+    <h1>Students Sorted by Marks</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Student ID</th>
+            <th>Marks</th>
+        </tr>
+        <% for (Student student : sortedStudents) { %>
+            <tr>
+                <td><%= student.getId() %></td>
+                <td><%= student.getName() %></td>
+                <td><%= student.getSurname() %></td>
+                <td><%= student.getStudentId() %></td>
+                <td><%= student.getMarks() %></td>
+            </tr>
+        <% } %>
+    </table>
+</body>
+</html>
