@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sort Students by Marks</title>
+    <style>
+        /* Your CSS styling here */
+    </style>
+</head>
+<body>
+    <h1>Students Sorted by Marks</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Student ID</th>
+            <th>Marks</th>
+        </tr>
+        <% for (Student student : students) { %>
+            <tr>
+                <td><%= student.getId() %></td>
+                <td><%= student.getName() %></td>
+                <td><%= student.getSurname() %></td>
+                <td><%= student.getStudentId() %></td>
+                <td><%= student.getMarks() %></td>
+            </tr>
+        <% } %>
+    </table>
+</body>
+</html>

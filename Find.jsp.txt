@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Student by ID</title>
+    <style>
+        /* Your CSS styling here */
+    </style>
+</head>
+<body>
+    <h1>Find Student by ID</h1>
+    <form action="findStudent" method="get">
+        <label>Student ID:</label>
+        <input type="text" name="studentId" required><br>
+        <input type="submit" value="Find">
+    </form>
+    <% if (foundStudent != null) { %>
+        <p>Name: <%= foundStudent.getName() %></p>
+        <p>Surname: <%= foundStudent.getSurname() %></p>
+        <p>Student ID: <%= foundStudent.getStudentId() %></p>
+        <p>Marks: <%= foundStudent.getMarks() %></p>
+    <% } %>
+</body>
+</html>
